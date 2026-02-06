@@ -1,61 +1,72 @@
 # Dynamic RTD Firebase Dashboard
 
-Dashboard ini merupakan antarmuka web yang dirancang untuk memantau dan mengendalikan perangkat IoT secara real-time menggunakan integrasi Firebase Realtime Database. Proyek ini mempermudah visualisasi data sensor dan kontrol aktuator melalui browser.
+Dashboard ini merupakan antarmuka web modern yang dirancang untuk memantau dan mengendalikan perangkat IoT secara real-time. Proyek ini memanfaatkan integrasi Firebase Realtime Database untuk sinkronisasi data instan antara perangkat keras (hardware) dan antarmuka pengguna.
 Fitur Utama
 
-    Monitoring Real-time: Memantau data dari sensor (seperti suhu, kelembapan, dll) yang terhubung ke Firebase secara instan.
+    Monitoring Real-time: Visualisasi data sensor secara instan tanpa perlu memuat ulang halaman.
 
-    Kontrol Perangkat: Tombol kendali (Switch/Button) untuk menyalakan atau mematikan perangkat dari jarak jauh.
+    Kontrol Perangkat: Antarmuka kendali yang responsif untuk manajemen aktuator jarak jauh.
 
-    Visualisasi Dinamis: Tampilan yang responsif dan adaptif terhadap perubahan data di database.
+    UI/UX Modern: Desain antarmuka yang bersih, cepat, dan sepenuhnya responsif di berbagai perangkat.
 
-    Integrasi Firebase: Terhubung langsung dengan Firebase Realtime Database untuk sinkronisasi data dua arah.
+    Integrasi Firebase: Sinkronisasi dua arah yang efisien menggunakan Firebase Realtime Database.
 
-Prasyarat
+Teknologi yang Digunakan (Tech Stack)
 
-Sebelum menggunakan dashboard ini, pastikan Anda memiliki:
+Proyek ini dibangun menggunakan teknologi terbaru untuk memastikan performa dan pengalaman pengguna yang optimal:
 
-    Perangkat IoT (seperti ESP32 atau ESP8266) yang sudah terkonfigurasi dengan Firebase.
+    Vite: Build tool generasi berikutnya yang memberikan kecepatan pengembangan luar biasa.
 
-    URL Firebase Realtime Database yang aktif.
+    React: Library JavaScript populer untuk membangun antarmuka pengguna berbasis komponen.
 
-    Struktur JSON yang sesuai di Firebase agar dapat dibaca oleh dashboard.
+    TypeScript: Memberikan keamanan tipe data untuk mengurangi kesalahan saat pengembangan.
+
+    Tailwind CSS: Framework CSS berbasis utilitas untuk desain UI yang cepat dan fleksibel.
+
+    shadcn/ui: Komponen UI yang dapat digunakan kembali, dibangun di atas Radix UI dan Tailwind CSS.
 
 Cara Penggunaan
 
-    Akses Website: Buka https://iotfirebase.netlify.app/ melalui browser Anda.
+    Akses Dashboard: Buka https://iotfirebase.netlify.app/.
 
-    Konfigurasi Koneksi: (Jika diminta) Masukkan konfigurasi API Key atau URL Firebase Anda untuk menghubungkan dashboard dengan database pribadi.
+    Koneksi Firebase: Pastikan kredensial Firebase sudah terkonfigurasi dengan benar di dalam aplikasi agar sinkron dengan database Anda.
 
-    Memantau Data: Periksa bagian panel sensor untuk melihat nilai numerik atau grafik yang berubah secara otomatis saat ada pengiriman data dari perangkat IoT.
+    Pemantauan: Data dari sensor akan muncul secara otomatis pada panel yang tersedia.
 
-    Mengendalikan Perangkat: Klik pada tombol toggle atau switch yang tersedia untuk mengirimkan instruksi (misal: mengubah nilai 0 menjadi 1) ke Firebase, yang kemudian akan diterima oleh perangkat hardware Anda.
+    Kendali: Gunakan komponen switch atau button dari shadcn/ui untuk mengubah status perangkat di lapangan.
 
-Struktur Database (Contoh)
+Struktur Database JSON
 
-Agar dashboard berfungsi optimal, pastikan struktur data di Firebase mengikuti pola berikut:
+Agar dashboard dapat berkomunikasi dengan lancar dengan perangkat IoT Anda, gunakan struktur JSON berikut pada Firebase Realtime Database:
 JSON
 
 {
-  "sensor": {
-    "temperature": 25.5,
-    "humidity": 60
+  "device_info": {
+    "status": "online",
+    "last_seen": "2026-02-06T11:04:00Z"
   },
-  "control": {
-    "led_status": 0
+  "monitoring": {
+    "temperature": 27.5,
+    "humidity": 55,
+    "voltage": 12.6
+  },
+  "controls": {
+    "relay_1": false,
+    "relay_2": true,
+    "main_switch": 0
   }
 }
 
-Teknologi yang Digunakan
+Pengembangan
 
-    Web Base: Vite, TypeScript, React, shadcn-ui, Tailwind CSS
+Jika Anda ingin menjalankan proyek ini secara lokal:
 
-    Database: Firebase Realtime Database.
+    Clone repositori.
 
-    Hosting: Netlify.
+    Jalankan npm install atau pnpm install.
 
-Kontribusi
+    Jalankan server pengembangan dengan npm run dev.
 
-Jika Anda ingin mengembangkan lebih lanjut atau menemukan bug, silakan hubungi pengembang atau lakukan pull request jika repositori tersedia secara publik.
+    Build untuk produksi dengan npm run build.
 
-Dokumen ini dibuat sebagai panduan dasar operasional website IoT Firebase.
+Dibuat untuk mempermudah manajemen ekosistem IoT berbasis web.
