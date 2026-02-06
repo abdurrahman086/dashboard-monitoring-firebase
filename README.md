@@ -40,20 +40,14 @@ Struktur Database JSON
 Agar dashboard dapat berkomunikasi dengan lancar dengan perangkat IoT Anda, gunakan struktur JSON berikut pada Firebase Realtime Database:
 JSON
 
+```json
 {
-  "device_info": {
-    "status": "online",
-    "last_seen": "2026-02-06T11:04:00Z"
-  },
   "monitoring": {
-    "temperature": 27.5,
-    "humidity": 55,
-    "voltage": 12.6
+    "temp": 28.5,
+    "hum": 60
   },
-  "controls": {
-    "relay_1": false,
-    "relay_2": true,
-    "main_switch": 0
+  "switch": {
+    "led": true
   }
 }
 
