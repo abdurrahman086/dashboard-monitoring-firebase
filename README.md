@@ -61,8 +61,9 @@ Langkah Instalasi
     Bash
     
     npm run dev
+    
 
-📖 Panduan Penggunaan
+# 📖 Panduan Penggunaan
 
 Setelah aplikasi berjalan, berikut adalah cara menggunakan dashboard untuk monitoring:
 1. Menghubungkan Hardware ke Firebase
