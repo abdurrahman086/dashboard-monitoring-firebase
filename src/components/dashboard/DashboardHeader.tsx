@@ -15,7 +15,7 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({ onShowJsonGuid
     <header className="h-14 bg-card border-b border-border flex items-center justify-between px-6 shrink-0">
       <div>
         <span className="text-sm text-muted-foreground">IDN Boarding School</span>
-        <h1 className="text-xl font-bold text-foreground -mt-1">Dashboard Monitoring System</h1>
+        <h1 className="text-xl font-bold text-foreground -mt-1">RTDB Monitoring System</h1>
       </div>
       
       <div className="flex items-center gap-4">
