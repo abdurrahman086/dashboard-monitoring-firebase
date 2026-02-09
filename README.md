@@ -1,4 +1,4 @@
-IoT Dashboard Monitoring - Firebase
+# IoT Dashboard Monitoring - Firebase
 
 Dashboard berbasis web modern yang dirancang untuk memantau data perangkat IoT secara real-time. Proyek ini terintegrasi dengan Firebase Realtime Database untuk menyajikan data sensor secara instan dan interaktif.
 🚀 Fitur Utama
@@ -25,22 +25,13 @@ Dashboard berbasis web modern yang dirancang untuk memantau data perangkat IoT s
 
     Deployment: Netlify
 
-📁 Struktur Proyek
-Plaintext
-
-src/
-├── components/     # Komponen UI (shadcn & custom)
-├── lib/            # Konfigurasi utility (seperti utils.ts)
-├── firebase/       # Konfigurasi dan inisialisasi Firebase
-├── hooks/          # Custom hooks untuk fetch data real-time
-└── App.tsx         # Layout utama dashboard
 
 ⚙️ Persiapan Lokal
 Prasyarat
 
     Node.js (disarankan versi LTS)
 
-    Bun atau NPM/PNPM
+    NPM
 
 Langkah Instalasi
 
